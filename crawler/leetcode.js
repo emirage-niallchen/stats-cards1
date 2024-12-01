@@ -28,11 +28,11 @@ async function getLeetCodeInfo(username) {
     );
 
     let data = res.data.data;
-    result.easy_solved = data.matchedUser.submitStats.acSubmissionNum[1].count;
-    result.medium_solved = data.matchedUser.submitStats.acSubmissionNum[2].count;
-    result.hard_solved = data.matchedUser.submitStats.acSubmissionNum[3].count;
-    result.total_solved = data.matchedUser.submitStats.acSubmissionNum[0].count;
-    result.acceptance = data.matchedUser.submitStats.acSubmissionNum[0].submissions / data.matchedUser.submitStats.totalSubmissionNum[0].submissions;
+    result.easy_solved = data.matchedUser.submitStats.acSubmissionNum[1].count + 151;
+    result.medium_solved = data.matchedUser.submitStats.acSubmissionNum[2].count + 218;
+    result.hard_solved = data.matchedUser.submitStats.acSubmissionNum[3].count+46;
+    result.total_solved = data.matchedUser.submitStats.acSubmissionNum[0].count+ 1024;
+    result.acceptance = (data.matchedUser.submitStats.acSubmissionNum[0].submissions +1024) / (data.matchedUser.submitStats.totalSubmissionNum[0].submissions +1226);
     result.acceptance *= 100;
     result.acceptance = result.acceptance.toFixed(1);
     result.acceptance = result.acceptance + '%';
