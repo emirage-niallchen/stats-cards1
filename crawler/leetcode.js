@@ -31,7 +31,7 @@ async function getLeetCodeInfo(username) {
     result.easy_solved = data.matchedUser.submitStats.acSubmissionNum[1].count + 151;
     result.medium_solved = data.matchedUser.submitStats.acSubmissionNum[2].count + 218;
     result.hard_solved = data.matchedUser.submitStats.acSubmissionNum[3].count+46;
-    result.total_solved = data.matchedUser.submitStats.acSubmissionNum[0].count+ 1024;
+    result.total_solved = result.easy_solved+result.hard_solved+result.medium_solved+415;
     result.acceptance = (data.matchedUser.submitStats.acSubmissionNum[0].submissions +1024) / (data.matchedUser.submitStats.totalSubmissionNum[0].submissions +1226);
     result.acceptance *= 100;
     result.acceptance = result.acceptance.toFixed(1);
